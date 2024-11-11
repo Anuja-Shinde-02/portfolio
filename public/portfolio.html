@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Anuja</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/top.css">
+    <link rel="stylesheet" href="/css/portfolio.css">
+</head>
+<body>
+    <!-- Placeholder for Header -->
+    <header id="header"></header>
+
+    <!-- Hero Section -->
+    <section class="portfolio-hero">
+        <div class="portfolio-hero-content">
+            <div class="portfolio-text">
+                <h1>Check out some of my latest work.</h1>
+                <p>I’ve worked for corporations, and have led projects to design products used by millions of people.</p>
+            </div>
+            <div class="portfolio-image">
+                <img src="/images/dummy2.jpeg" alt="Portfolio Showcase" width="300px" height="300px">
+            </div>
+        </div>
+    </section>
+
+    <!-- Body Section - Projects/Work Cards -->
+    <section class="portfolio-cards">
+        <h2>My Work</h2>
+        <div class="cards-container">
+            <a href="/project1.html" class="portfolio-card">
+                <br><br><br><br><br>
+                <img src="/images/TravelWhizTN1.gif" alt="Project 1" class="card-image"><br><br><br><br><br>
+                <p>Travel Whiz - Your Personal Travel Assistant</p>
+            </a>
+            <a href="/project3.html" class="portfolio-card">
+                <img src="/images/ISD.jpeg" alt="Project 3" class="card-image">
+                <p>ISD Course Design Process Application</p>
+            </a>
+            <a href="/project2.html" class="portfolio-card">
+                <img src="/images/FoodliTN.gif" alt="Project 2" class="card-image">
+                <p>Foodlicious - UX design for Food & Beverage Platform</p>
+            </a> 
+            <a href="/project4.html" class="portfolio-card">
+                <br><br><br><br><br>
+                <img src="/images/Cloud.png" alt="Project 4" class="card-image"><br><br><br><br><br>
+                <p>Cloud App - Assignment Management</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Placeholder for Project Details -->
+    <div id="project-detail" style="display: none;"></div>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top-container"></div>
+
+    <!-- Scripts -->
+    <script src="/src/scripts/portfolio.js"></script>
+    <script>
+        fetch("/components/top.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("back-to-top-container").innerHTML = html;
+            });
+    </script>
+    
+    <!-- Directly included footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Anuja Shinde. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/src/scripts/footer.js"></script> <!-- Footer visibility logic -->
+    <script src="/src/scripts/common.js"></script>
+</body>
+</html>

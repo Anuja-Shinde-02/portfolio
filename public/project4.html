@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Management System | Anuja</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/top.css">
+    <link rel="stylesheet" href="/css/project4.css">
+</head>
+<body>
+    <header id="header"></header>
+    <!-- Hero Section -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <h1>Assignment Management System</h1>
+            <p>A comprehensive assignment management platform integrating multiple technologies across a full-stack application for enhanced functionality.</p>
+        </div>
+    </section>
+
+    <!-- Detailed Sections -->
+    <section class="project-details">
+        <h2>Project Overview</h2>
+        <p>This project showcases a full-stack approach to building and deploying a scalable web application for managing assignments, integrating Node.js, AWS, and serverless architectures. The system is designed to automate and streamline the handling of educational assignments through sophisticated technical solutions.</p>
+        <a href="https://github.com/orgs/cloudprojectorg/repositories">Cloud App on GitHub</a>
+
+        <h2>Node.js Web Application</h2>
+        <ul>
+            <li>User authentication with secure login and session management.</li>
+            <li>CRUD operations for assignment management.</li>
+            <li>Automated health checks to ensure continuous application performance.</li>
+            <li>Configurable logging with file rotation for security and compliance.</li>
+        </ul>
+
+        <h2>Pulumi Infrastructure on AWS</h2>
+        <ul>
+            <li>Automated provisioning of AWS resources including VPC, subnets, RDS, and EC2 instances.</li>
+            <li>Detailed documentation and setup guides for deployment consistency.</li>
+            <li>Secure setup of Internet Gateway and route tables for reliable network connectivity.</li>
+        </ul>
+
+        <h2>Serverless Lambda Function</h2>
+        <ul>
+            <li>Handling of assignment submissions with real-time processing and feedback.</li>
+            <li>Integration with AWS SNS, DynamoDB for event logging, and external services like Mailgun for email notifications.</li>
+        </ul>
+
+        <h2>Technologies Used</h2>
+        <p>Node.js, AWS, Pulumi, MySQL, Lambda, SNS, DynamoDB, Mailgun, Google Cloud Storage.</p>
+
+        <h2>Challenges and Learnings</h2>
+        <p>The integration of diverse technologies and the assurance of a seamless flow of data across different components presented significant challenges. This project emphasized the importance of security practices and thorough system testing to maintain integrity and performance.</p>
+
+        <h2>Conclusion</h2>
+        <p>This project not only highlights technical proficiency but also demonstrates the capability to architect and deploy a highly available, secure, and scalable system using modern web technologies. It exemplifies a holistic approach to application development from initial coding to infrastructure management and serverless computing.</p>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Anuja Shinde. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="back-to-top-container"></div>
+    <script>
+        fetch("/components/top.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("back-to-top-container").innerHTML = html;
+            });
+    </script>
+
+    <script src="/src/scripts/portfolio.js"></script>
+    <script src="/src/scripts/footer.js"></script>
+    <script src="/src/scripts/common.js"></script>
+</body>
+</html>

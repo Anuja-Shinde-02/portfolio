@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISD Course Design Process Application | Anuja</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/top.css">
+    <link rel="stylesheet" href="/css/project3.css">
+</head>
+<body>
+    <header id="header"></header>
+    <main>
+        <!-- Hero Section -->
+        <section class="project-hero">
+            <div class="project-hero-content">
+                <h1>ISD Course Design Process Application</h1>
+                <p>Explore the comprehensive case study of the ISD Course Design Process App, a digital solution developed by KeelWorks to streamline educational and corporate training course design.</p>
+            </div>
+        </section>
+
+        <!-- Detailed Sections -->
+        <section class="project-details">
+            <h2>Project Overview</h2>
+            <p>This project addresses the inefficiencies of decentralized documentation and redundant data entry in the course design process by introducing a unified, role-based application.</p>
+
+            <h2>Why Build It?</h2>
+            <p>The ISD Course Design Process App consolidates documentation and workflows to enhance efficiency, improve version control, and streamline stakeholder approvals.</p>
+
+            <h2>Application Aim</h2>
+            <p>The app aims to unify documentation, streamline the approval process, enhance collaboration, and support efficient course updates.</p>
+
+            <h2>Key User Roles and Permissions</h2>
+            <ul>
+                <li>Instructional System Designer (ISD): Full creation and editing capabilities.</li>
+                <li>Stakeholder: Approval and feedback provision.</li>
+                <li>Subject Matter Expert (SME) & Employees: Limited viewing access.</li>
+                <li>Support Staff: Design and technical support with restricted editing.</li>
+            </ul>
+            <img src="/images/ISD2.png" alt="ISDOverview" width="400">
+            
+            <h2>Challenges Addressed</h2>
+            <p>The application tackles inefficiencies in documentation, issues with version control, and collaboration hurdles within the course design process.</p>
+
+            <h2>Step-by-Step Process Overview</h2>
+            <p>The ISD Course Design Process App features a structured workflow for different user roles, from course creation by ISDs to approval by stakeholders and viewing by SMEs and employees.</p>
+            <img src="/images/ISDFlowChart.png" alt="ISDFlowChart" width="200">
+
+            <h2>Application Interface and Navigation</h2>
+            <p>The interface features a horizontal tab layout that displays various stages of the course design process, with role-based access control enhancing security and user experience.</p>
+            <img src="/images/ISD1.png" alt="ISDDashboard" width="400">
+
+            <h2>Conclusion</h2>
+            <p>This case study highlights how the ISD Course Design Process App streamlines and centralizes the course design process at KeelWorks, enhancing productivity and potentially serving as a commercial product for other organizations.</p>
+        </section>
+    </main>
+    <div id="back-to-top-container"></div>
+    <script>
+        fetch("/components/top.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("back-to-top-container").innerHTML = html;
+            });
+    </script>
+
+    <!-- Directly included footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Anuja Shinde. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/src/scripts/portfolio.js"></script>
+    <script src="/src/scripts/footer.js"></script> <!-- Footer visibility logic -->
+    <script src="/src/scripts/common.js"></script>
+</body>
+</html>

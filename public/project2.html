@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodlicious – Comprehensive Online Food Ordering System | Anuja</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/top.css">
+    <link rel="stylesheet" href="/css/project2.css">
+</head>
+<body>
+    <header id="header"></header>
+    <main>
+        <!-- Hero Section -->
+        <section class="project-hero">
+            <div class="project-hero-content">
+                <h1>Foodlicious – Comprehensive Online Food Ordering System</h1>
+                <p>Explore the detailed case study of Foodlicious, showcasing innovative solutions in the food industry.</p>
+            </div>
+        </section>
+
+        <!-- Detailed Sections -->
+        <section class="project-details">
+            <h2>Project Overview</h2>
+            <p>Project Title: Foodlicious – Comprehensive Online Food Ordering System</p>
+            <p>Role: Lead Developer and Designer</p>
+            <p>Industry: Food & Beverage</p>
+            <p>Duration: 4 weeks</p>
+            <a href="https://github.com/Anuja-Shinde-02/Foodlicious.git">Foodlicious on GitHub</a>
+
+            <h2>Introduction</h2>
+            <p>Foodlicious is a fully-functional online food ordering system designed to provide a seamless experience for both customers and restaurant administrators. Built with a tech stack of React, Node.js, Express.js, and MongoDB, it allows users to manage and track orders with real-time updates.</p>
+
+            <h2>Problem Statement</h2>
+            <p>Many online food ordering platforms lack efficient order management and intuitive user interfaces, posing challenges for restaurant owners and customers alike.</p>
+            <img src="/images/foodli1.png" alt="FoodliciousHomePage1" width="600"> 
+            <img src="/images/foodli2.png" alt="FoodliciousHomePage2" width="600">
+
+
+            <h2>Solution</h2>
+            <p>Foodlicious integrates customer-facing and admin-facing functionalities, streamlining the entire order process and enhancing user experience with robust backend support.</p>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li>User and Admin Dashboards for comprehensive management.</li>
+                <li>Seamless order tracking and management.</li>
+                <li>Integrated payment processing with Stripe for secure transactions.</li>
+            </ul>
+            <img src="/images/foodli3.png" alt="FoodliciousCart" width="400">    
+            <img src="/images/foodli6.png" alt="FoodliciousAdminPanel2" width="400"> <br>
+            <img src="/images/foodli4.png" alt="FoodliciousPayment" width="400"> 
+            <img src="/images/foodli7.png" alt="FoodliciousContact" width="400">    
+
+            <h2>Technologies Used</h2>
+            <p>Frontend: React. Backend: Node.js, Express.js. Database: MongoDB.</p>
+
+            <h2>Design and Development Process</h2>
+            <p>The development followed a structured approach, from user research and prototyping to frontend and backend development, ensuring a high-quality end product.</p>
+
+            <h2>User Research</h2>
+            <p>User interviews and usability testing were conducted to refine the application, ensuring it met the needs of its target audience effectively.</p>
+
+            <h2>Challenges and Learnings</h2>
+            <p>Key challenges included integrating Stripe for secure payments and managing real-time updates. These were overcome by employing advanced technologies and thorough testing.</p>
+
+            <h2>Conclusion</h2>
+            <p>Foodlicious is a testament to the effective use of modern web technologies to solve real-world problems in the food and beverage industry, providing a scalable, user-friendly platform.</p>
+        </section>
+    </main>
+
+    <div id="back-to-top-container"></div>
+    <script>
+        fetch("/components/top.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("back-to-top-container").innerHTML = html;
+            });
+    </script>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Anuja Shinde. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
+
+    <script>
+        fetch("/components/top.html")
+            .then(response => response.text())
+            .then(html => {
+                const topContainer = document.createElement('div');
+                topContainer.id = 'back-to-top-container';
+                topContainer.innerHTML = html;
+                document.body.appendChild(topContainer);
+            });
+    </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var backToTopContainer = document.getElementById("back-to-top-container");
+        if (backToTopContainer) {
+            fetch("/components/top.html")
+                .then(response => response.text())
+                .then(html => {
+                    backToTopContainer.innerHTML = html;
+                });
+        } else {
+            console.error("Element with ID 'back-to-top-container' was not found.");
+        }
+    });
+    </script>
+
+    
+    <script src="/src/scripts/portfolio.js"></script>    
+    <script src="/src/scripts/common.js"></script>
+    <script src="/src/scripts/footer.js"></script> <!-- Footer visibility logic -->
+</body>
+</html>

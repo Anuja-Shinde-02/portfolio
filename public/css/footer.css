@@ -1,0 +1,30 @@
+footer {    
+    font-family: Helvetica, sans-serif, Arial;
+    display: none; /* Start as hidden and let JavaScript control visibility */
+    justify-content: center; /* Center the footer-content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 10px 0; /* Reduced padding to remove unnecessary space */
+    background-color: #e4dfdf; /* Background color */
+    color: #858080; /* Text color */
+    border-top: 1px solid #d8d5d5; /* Subtle border at the top */
+    width: 100%; /* Full width */
+    position: fixed; /* Fix it to the bottom of the viewport */
+    left: 0; /* Align left */
+    right: 0; /* Align right */
+    bottom: 0; /* Position at the bottom */
+    text-align: center; /* Center text within footer */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer p {
+    margin: 0; /* Ensure no extra margin */
+    font-size: 16px;
+}

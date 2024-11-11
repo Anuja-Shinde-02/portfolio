@@ -1,0 +1,144 @@
+/* Base body styling */
+body {
+    font-family: Helvetica, sans-serif, Arial;
+    background-color: #c4c2c2; /* Light gray background for consistency */
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section with Background Video */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.1); /* Dark background with transparency */
+    padding: 40px;
+    text-align: center;
+    color: rgb(78, 77, 77);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Hero Section */
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    font-family: "proxima nova bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start position for animation */
+    transition: all 1.5s ease; /* Transition for smooth animation */
+}
+
+.hero .description {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Trigger animation when in-view */
+.in-view h1, 
+.in-view .description {
+    opacity: 1;
+    transform: translateY(0); /* Move into position */
+}
+
+/* Latest Work Section */
+.latest-work {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #eaeaea; /* Light gray background */
+    color: rgb(92, 90, 90);; /* Dark gray text for contrast */
+    overflow-x: hidden;  
+}
+
+.latest-work h3{
+    font-family: "proxima nova bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: large;
+    color: #535353; /* Dark gray text for contrast */
+}
+
+/* Scrolling gallery styling */
+.scrolling-gallery {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite; /* Adjust duration for speed */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.scrolling-gallery img {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    margin: 0 10px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    border-radius: 5px;
+    padding-bottom: 40px;
+}
+
+.scrolling-gallery img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%); /* Moves only half of the full content to restart seamlessly */
+    }
+}
+
+/* Class to pause the animation */
+.paused {
+    animation-play-state: paused !important; /* Stops animation */
+    transition: transform 0.5s ease; /* Adjust duration for smoother stop */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero .description {
+        font-size: 16px;
+    }
+
+    footer .back-to-top {
+        right: 10px;
+        bottom: 10px;
+        font-size: 18px;
+    }
+}

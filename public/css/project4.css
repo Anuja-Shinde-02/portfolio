@@ -1,0 +1,120 @@
+/* Extending styles from portfolio.css */
+body {
+    font-family: "proxima nova bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures footer is at the bottom of the page */
+}
+
+header, section, footer {
+    flex-shrink: 0; /* Prevents these elements from shrinking */
+}
+
+.project-hero, .project-details {
+    flex: 1 0 auto; /* Makes content sections fill available space */
+    overflow: auto; /* Adds scroll to sections if content overflows */
+}
+
+.project-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center aligns items vertically */
+    padding: 50px 100px;
+    background-color: #f4f4f4;
+}
+
+.project-hero-content {
+    display: flex; /* Makes the container flexible */
+    align-items: center; /* Aligns children vertically in the middle */
+    justify-content: flex-start; /* Aligns children to the start */
+    width: 100%;
+    margin-top: 150px;
+}
+
+.project-hero-content h1, .project-hero-content p {
+    margin-right: 20px; /* Adds space between the title and the paragraph */
+}
+
+.project-hero-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    flex: 1 0 auto; /* Allows the title to grow as needed */
+    animation: fadeInUp 1s ease;
+}
+
+.project-hero-content p {
+    font-size: 1rem;
+    color: #666;
+    flex: 3 1 auto; /* Allows the paragraph to take up more space */
+    animation: fadeInUp 1.5s ease;
+}
+
+.project-details {
+    padding: 50px 100px;
+    background-color: #fff;
+}
+
+.project-details h2 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease;
+}
+
+.project-details p, .project-details ul{
+    font-size: 1rem;
+    color: #666;
+}
+
+.project-details ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Link Hover Effect */
+.project-details a:hover {
+    color: #0073e6; /* Accent color for links on hover */
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Responsive Adjustments */
+@media (max-width: 768px) {
+    .project-hero-content,
+    .project-details {
+        padding: 20px;
+        text-align: center;
+        flex-direction: column; /* Stacks the elements vertically on smaller screens */
+    }
+
+    .project-hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .project-hero-content p,
+    .project-details h2 {
+        font-size: 1.2rem;
+    }
+
+    .project-hero-content h1, 
+    .project-hero-content p {
+        margin-right: 0; /* Removes the right margin in vertical stacking */
+    }
+}
