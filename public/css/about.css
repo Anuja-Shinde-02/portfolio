@@ -39,7 +39,7 @@ body {
 
 /* Headings for Designer and Coder */
 .designer h2, .coder h2 {
-    font-size: 50px; /* Make the heading bigger */
+    font-size: 2rem; /* Make the heading bigger */
     font-weight: bold; /* Make the heading bold */
     margin-bottom: 10px; /* Add space between heading and paragraph */
     font-family: "proxima nova bold", "Helvetica Neue", Helvetica, Arial, Sans-serif; /* Use a monospace font to give it a coding feel */
@@ -48,7 +48,7 @@ body {
 .coder h2 {
     font-family: "proxima nova bold", "Helvetica Neue", Helvetica, Arial, Sans-serif; /* Monospaced font for coding feel */
     color: #333333; /* Terminal black */
-    font-size: 48px;
+    font-size: 2.2rem;
     font-weight: bold;
     letter-spacing: 2px;
     background-color: none; /* Black background for the terminal look */
@@ -83,7 +83,7 @@ body {
 .designer h2 {
     font-family: "proxima nova bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333333;
-    font-size: 48px;
+    font-size: 2.2rem;
     font-weight: 700;
     letter-spacing: 2px;
 }
@@ -113,7 +113,7 @@ body {
 
 /* Paragraph for Designer and Coder */
 .designer p, .coder p {
-    font-size: 1.3rem; /* Adjust the paragraph size */
+    font-size: 0.9rem; /* Adjust the paragraph size */
     line-height: 1.6; /* Add line spacing for readability */
     margin: 0; /* Remove default margin */
 }
@@ -130,9 +130,9 @@ body {
 }
 
 .intro {
-    font-size: 2.2rem; /* Larger font size for the introduction text */
+    font-size: 1.2rem; /* Larger font size for the introduction text */
     font-weight:100; /* Make the introduction text bold */
-    margin: 40px 0 0 360px; /* Space below the description text */
+    margin: 40px 0 0 330px; /* Space below the description text */
     max-width: 50%; /* Limit width to allow wrapping */
     line-height: 1.5; /* Increase line height for better readability */
     word-wrap: break-word; /* Break long words if needed */
@@ -141,9 +141,9 @@ body {
 }
 
 .description {
-    font-size: 1.2rem; /* Smaller font size for the description text */
+    font-size: 0.9rem; /* Smaller font size for the description text */
     font-weight: normal; /* Regular font weight for the description text */
-    margin: 30px 0 0 510px; /* Space below the description text */
+    margin: 30px 0 0 460px; /* Space below the description text */
     max-width: 30%; /* Limit width to allow wrapping */
     line-height: 1.5; /* Increase line height for better readability */
     word-wrap: break-word; /* Break long words if needed */
@@ -166,8 +166,8 @@ body {
 
 /* Additional CSS for image animations */
 .about-images img {
-    width: 110px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 10%;
     margin: 10px;
     padding: 3px;
@@ -198,7 +198,7 @@ body {
 
 
 .skills-chart ul {
-    font-size: 1.2rem;
+    font-size: 1rem;
     list-style: none;
     margin-left: -40px;
 }
@@ -206,22 +206,31 @@ body {
 .skills-chart .pie-chart {
     width: 25%;
     text-align: left;
+    margin-right: 70px ;
 }
 
 /* Sub-Headings and List Items */
 .skills-chart h2, .skills-bar h2, .random-facts h2, .my-story h2 {
-    font-size: 2.2rem; /* Larger font size for the introduction text */
+    font-size: 1rem; /* Larger font size for the introduction text */
     font-weight:100; /* Make the introduction text bold */
 }
 
 .skills-chart ul, .random-facts ul {
-    font-size: 1.2rem; /* Smaller font size for list items */
+    font-size: 0.9rem; /* Smaller font size for list items */
     font-weight: 100; /* Regular text */
+}
+
+.designer-skills{
+    margin-left: 100px;
+}
+
+.designer-skills, .coder-skills{
+    margin-top: -60px;
 }
 
 /* Random Facts Section */
 .random-facts {
-    padding: 40px;
+    padding: 10px;
     margin-bottom: 10px;
     margin-left: auto;  /* Centers the section by setting left and right margins to auto */
     margin-right: auto; /* Centers the section by setting left and right margins to auto */
@@ -243,7 +252,7 @@ body {
 .random-facts h2 {
     text-align: left;
     margin-bottom: 10px;
-    margin-left: 20px;
+    margin-left: 18px;
 }
 
 .random-facts ul {
@@ -255,7 +264,6 @@ body {
 .random-facts .fact-text {
     flex: 1; /* Allows text area to fill available space */
     margin-right: 20px; /* Adjust right margin as needed */
-    margin-left: 150px;
 }
 
 .random-facts .fact-image {
@@ -294,13 +302,13 @@ body {
 .skills-bar h2{
     padding-left: 100px;
     margin-left: 30px;
-    margin-top: 50px;
+    margin-top: 200px;
     align-self: flex-start;
 }
 
 .bar-graph {
     display: flex;
-    height: 400px; /* Ensure correct height for bar chart */
+    height: 350px; /* Ensure correct height for bar chart */
     width: 50%; /* Adjust width of bar graph */
     position: relative;
     border-left: 1px solid #d3d0d0; /* Y-axis */
@@ -309,6 +317,7 @@ body {
     padding-bottom: 0px;
     box-sizing: border-box;
     margin: 0 auto; /* Center the graph */
+    margin-left: 130px;
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -346,7 +355,7 @@ body {
 .bar-fill::before {
     content: attr(data-skill-level) '%'; /* Display percentage from data attribute */
     display: block;
-    font-size: 1.2rem; /* Larger size for percentage */
+    font-size: 1rem; /* Larger size for percentage */
     font-weight: bold;
     line-height: 1.5;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for percentage text */
@@ -387,8 +396,7 @@ body {
     top: -5px;
     left: -60px; /* Increase to create space from the Y-axis */
     transform: translateX(0);
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .bar-graph::after {
@@ -399,14 +407,14 @@ body {
     right: 0;
     height: 20px; /* Adjust height for X-axis labels */
     border-top: 2px #252525;
-    font-size: 1.2rem;
-    margin-left: 770px;
+    font-size: 1rem;
+    margin-left: 660px;
 }
 
 /* My Story Section */
 .my-story {
     height: auto;
-    padding: 20px;
+    padding: 10px;
     margin-bottom: 45px;
     margin-left: 80px;
     margin-right: 80px;
@@ -416,7 +424,7 @@ body {
 .my-story h2 {
     text-align: left;
     margin-left: 50px;
-    margin-top: 50px;
+    margin-top: 80px;
     align-self: flex-start;
 }
 
@@ -432,6 +440,7 @@ body {
     border-radius: 5px;
     margin-bottom: 20px;
     margin-left: 200px;
+    margin-top: -50px;
     opacity: 0; /* Start as invisible */
     transform: translateX(100%); /* Start from the right off-screen */
     transition: transform 0.4s ease-out, opacity 0.4s ease-out; /* Smooth transition for moving and fading in */
@@ -448,10 +457,10 @@ body {
 }
 
 .my-story p {
-    margin-top: -50px;
+    margin-top: -100px;
     margin-left: 50px;
-    font-size: 1.2rem;
-    max-width: 55%; /* Limit width to allow wrapping */
+    font-size: 0.9rem;
+    max-width: 50%; /* Limit width to allow wrapping */
     line-height: 1.5; /* Increase line height for better readability */
     word-wrap: break-word; /* Break long words if needed */
     animation: fadeInUp 1.5s ease;

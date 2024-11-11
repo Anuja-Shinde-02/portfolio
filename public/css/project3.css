@@ -39,7 +39,7 @@ body {
 
 .project-details p,
 .project-details ul li {
-    font-size: 1rem; /* Unified font size for all text elements */
+    font-size: 0.9rem; /* Unified font size for all text elements */
     color: #666;
     line-height: 1.8;
     max-width: 75%; /* Limit width to allow wrapping */    

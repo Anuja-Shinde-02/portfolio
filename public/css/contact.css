@@ -4,19 +4,19 @@
     padding: 50px;
     background-color: #f4f4f4;
     animation: fadeInUp 1s ease;
-    margin-top: 20px; /* Add margin to create space from header */
+    margin-top: 40px; /* Add margin to create space from header */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .contact-hero h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     color: #333;
     font-family: 'proxima nova bold', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Ensuring font consistency */
 }
 
 .contact-hero p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #666;
     margin-bottom: 30px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -29,7 +29,7 @@
 }
 
 .social-icons a img {
-    width: 70px;
+    width: 20px;
     height: auto;
     transition: transform 0.3s ease;
 }
@@ -40,22 +40,23 @@
 
 /* Contact Form Section */
 .contact-form-section {
-    padding: 50px;
+    padding: 30px;
     background-color: #fff;
     text-align: center;
     animation: fadeInUp 1s ease;
     font-family: 'proxima nova bold', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Consistent font */
+    margin-bottom: 40px;
 }
 
 .contact-form-section h2 {
-    font-size: 2rem;
+    font-size: 1rem;
     margin-bottom: 40px;
 }
 
 form {
     max-width: 600px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 10px;
     border-radius: 8px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -68,7 +69,7 @@ form {
 label {
     display: block;
     margin-bottom: 8px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #333;
     font-family: 'proxima nova bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -76,7 +77,7 @@ label {
 input, textarea {
     width: 100%;
     padding: 12px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -85,23 +86,23 @@ input, textarea {
 input::placeholder, 
 textarea::placeholder {
     color: #a7a7a7;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Consistent placeholder font */
 }
 
 button {
-    padding: 12px 20px;
-    font-size: 1rem;
+    padding: 10px 10px;
+    font-size: 0.8rem;
     background-color: #333;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 2px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #474747;
 }
 
 /* Contact Form Message */
@@ -113,7 +114,7 @@ button:hover {
     background-color: #e0ffe0; /* Light green background for success */
     color: #2d662d; /* Darker green text */
     border: 2px solid #27ae60; /* Dark green border */
-    font-size: 1.2em;
+    font-size: 1em;
     font-family: 'proxima nova bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
     position: relative;
@@ -126,7 +127,7 @@ button:hover {
 
 /* Success Icon */
 .form-message .success-icon {
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #27ae60; /* Icon color matching the border */
 }
 

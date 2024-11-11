@@ -25,7 +25,7 @@ body {
 }
 
 .project-text h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #333;
     animation: fadeInUp 1s ease;
 }
@@ -33,7 +33,7 @@ body {
 .project-text p,
 .project-details p,
 .project-details ul li {
-    font-size: 1rem; /* Unified font size for all text elements */
+    font-size: 0.9rem; /* Unified font size for all text elements */
     color: #666;
     line-height: 1.8;
     max-width: 75%; /* Limit width to allow wrapping */    
@@ -42,7 +42,7 @@ body {
 }
 
 .project-details ol li {
-    font-size: 1rem; /* Unified font size for all text elements */
+    font-size: 0.9rem; /* Unified font size for all text elements */
     color: #666;
     line-height: 1.8;
     max-width: 75%; /* Limit width to allow wrapping */    
@@ -51,11 +51,11 @@ body {
 }
 
 #survey {
-    width: 500px;  /* Adjusts the width to take the full container width */
+    width: 1100px;  /* Adjusts the width to take the full container width */
 }
 
 #sorting {
-    width: 500px;  /* Adjusts the width to take the full container width */
+    width: 1100px;  /* Adjusts the width to take the full container width */
 }
 
 .project-details {
@@ -65,7 +65,7 @@ body {
 
 .project-details h2,
 .project-details h3 {
-    font-size: 1.5rem; /* Unified heading style for H2 and H3 */
+    font-size: 1rem; /* Unified heading style for H2 and H3 */
     color: #424242;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -77,9 +77,9 @@ body {
 }
 
 .project-details img{
-    width: 200px;
+    width: 400px;
     height: auto;
-    gap:15px;
+    gap: 15px;
     border: 2px solid #cfcccc; /* Soft gray border */
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
     opacity: 1;  /* Set initial opacity to 0 for animation */

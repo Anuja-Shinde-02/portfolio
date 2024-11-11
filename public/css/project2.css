@@ -25,7 +25,7 @@ body {
 }
 
 .project-text h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #333;
     animation: fadeInUp 1s ease;
 }
@@ -33,7 +33,7 @@ body {
 .project-text p,
 .project-details p,
 .project-details ul li {
-    font-size: 1rem; /* Unified font size for all text elements */
+    font-size: 0.9rem; /* Unified font size for all text elements */
     color: #666;
     line-height: 1.8;
     max-width: 75%; /* Limit width to allow wrapping */    
@@ -42,7 +42,7 @@ body {
 }
 
 .project-details ol li {
-    font-size: 1rem; /* Unified font size for all text elements */
+    font-size: 0.9rem; /* Unified font size for all text elements */
     color: #666;
     line-height: 1.8;
     max-width: 75%; /* Limit width to allow wrapping */    
@@ -62,7 +62,7 @@ body {
 
 .project-details h2,
 .project-details h3 {
-    font-size: 1.5rem; /* Unified heading style for H2 and H3 */
+    font-size: 1rem; /* Unified heading style for H2 and H3 */
     color: #424242;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -77,6 +77,11 @@ body {
 .project-details a:hover {
     color: #0073e6; /* Accent color for links on hover */
     text-decoration: underline;
+}
+
+.image-display{
+    width:500px;
+    height: auto;
 }
 
 /* Animations */
