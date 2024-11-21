@@ -1,4 +1,4 @@
-body {
+body, html {
     font-family: "proxima nova bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
@@ -8,10 +8,15 @@ body {
     padding: 0;
 }
 
+*, *:before, *:after {
+    box-sizing: inherit; /* Inherit box-sizing from body */
+}
+
 /* Split screen for Designer and Coder sections */
 .split-screen {
     display: flex;
-    height: 95vh;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    min-height: 100vh;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     animation: fadeInUp 1.5s ease;
 }
@@ -130,8 +135,8 @@ body {
 }
 
 .intro {
-    font-size: 1.2rem; /* Larger font size for the introduction text */
-    font-weight:100; /* Make the introduction text bold */
+    font-size: 1.4rem; /* Larger font size for the introduction text */
+    font-weight:700; /* Make the introduction text bold */
     margin: 40px 0 0 330px; /* Space below the description text */
     max-width: 50%; /* Limit width to allow wrapping */
     line-height: 1.5; /* Increase line height for better readability */
@@ -157,9 +162,10 @@ body {
 }
 
 .about-images {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Creates a responsive grid layout */
     justify-content: center;
-    margin: 50px 0 70px 0;
+    margin: 50px 0 70px 200px;
     gap: 15px;
     animation: fadeInDown 1.5s ease;
 }
@@ -185,7 +191,8 @@ body {
 
 .skills-chart {
     display: flex;
-    justify-content: space-around;
+    flex-direction:row; /* Stack horizontally on smaller screens */
+    justify-content:space-evenly;
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 10px 0 20px 0;
@@ -193,20 +200,26 @@ body {
 
 .skills-chart .designer-skills,
 .skills-chart .coder-skills {
-    width: 15%;
+    width: 100%;
 }
 
 
-.skills-chart ul {
-    font-size: 1rem;
+.skills-chart .designer-skills ul {
+    font-size: 0.9rem;
     list-style: none;
-    margin-left: -40px;
+    margin-left: 100px;
+}
+
+.skills-chart .coder-skills ul {
+    font-size: 0.9rem;
+    list-style: none;
+    margin-left: -20px;
 }
 
 .skills-chart .pie-chart {
     width: 25%;
     text-align: left;
-    margin-right: 70px ;
+    margin-right: 100px ;
 }
 
 /* Sub-Headings and List Items */
@@ -222,6 +235,14 @@ body {
 
 .designer-skills{
     margin-left: 100px;
+}
+
+.designer-skills h2{
+    margin-left: 140px;
+}
+
+.coder-skills h2{
+    margin-left: 20px;
 }
 
 .designer-skills, .coder-skills{
@@ -292,7 +313,7 @@ body {
     justify-content: center;
     font-weight: bold;
     align-items: flex-end;
-    padding: 20px;
+    padding: 30px;
     margin-bottom: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background-color: rgb(241, 245, 243);
@@ -301,7 +322,7 @@ body {
 
 .skills-bar h2{
     padding-left: 100px;
-    margin-left: 30px;
+    margin-left: 40px;
     margin-top: 200px;
     align-self: flex-start;
 }
@@ -309,7 +330,8 @@ body {
 .bar-graph {
     display: flex;
     height: 350px; /* Ensure correct height for bar chart */
-    width: 50%; /* Adjust width of bar graph */
+    width: 100%;
+    max-width: 600px; /* Ensures the graph is not too wide on larger screens */
     position: relative;
     border-left: 1px solid #d3d0d0; /* Y-axis */
     border-bottom: 1px solid #d3d0d0; /* X-axis */
@@ -323,7 +345,7 @@ body {
 }
 
 .bar {
-    width: 100px; /* Bar width */
+    width: 100%; /* Full width to accommodate smaller screens */
     margin: 0 20px;
     position: relative;
     display: flex;
@@ -393,8 +415,8 @@ body {
 .bar-graph::before {
     content: 'Level'; /* The Y-axis label */
     position: relative;
-    top: -5px;
-    left: -60px; /* Increase to create space from the Y-axis */
+    top: -20px;
+    left: -50px; /* Increase to create space from the Y-axis */
     transform: translateX(0);
     font-size: 1rem;
 }
@@ -408,7 +430,7 @@ body {
     height: 20px; /* Adjust height for X-axis labels */
     border-top: 2px #252525;
     font-size: 1rem;
-    margin-left: 660px;
+    margin-left: 600px;
 }
 
 /* My Story Section */
@@ -423,7 +445,7 @@ body {
 
 .my-story h2 {
     text-align: left;
-    margin-left: 50px;
+    margin-left: 400px;
     margin-top: 80px;
     align-self: flex-start;
 }
@@ -439,7 +461,7 @@ body {
     height: auto;
     border-radius: 5px;
     margin-bottom: 20px;
-    margin-left: 200px;
+    margin-left: 100px;
     margin-top: -50px;
     opacity: 0; /* Start as invisible */
     transform: translateX(100%); /* Start from the right off-screen */
@@ -458,9 +480,9 @@ body {
 
 .my-story p {
     margin-top: -100px;
-    margin-left: 50px;
+    margin-left: 250px;
     font-size: 0.9rem;
-    max-width: 50%; /* Limit width to allow wrapping */
+    max-width: 40%; /* Limit width to allow wrapping */
     line-height: 1.5; /* Increase line height for better readability */
     word-wrap: break-word; /* Break long words if needed */
     animation: fadeInUp 1.5s ease;
@@ -496,5 +518,20 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Media Queries for Additional Responsiveness */
+@media (max-width: 768px) {
+    .designer, .coder {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .designer h2, .coder h2 {
+        font-size: 1.2rem;
+    }
+
+    .designer p, .coder p {
+        font-size: 0.9rem;
     }
 }

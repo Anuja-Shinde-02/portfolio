@@ -41,7 +41,7 @@ header, section, footer {
 }
 
 .project-hero-content h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #333;
     flex: 1 0 auto; /* Allows the title to grow as needed */
     animation: fadeInUp 1s ease;
@@ -60,7 +60,7 @@ header, section, footer {
 }
 
 .project-details h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #333;
     margin-top: 20px;
     margin-bottom: 10px;

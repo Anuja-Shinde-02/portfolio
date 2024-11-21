@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/top.css">
     <link rel="stylesheet" href="/css/project1.css">
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+    <!-- For iOS web clips -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <!-- For Android and other devices -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
 </head>
 <body>
     <header id="header"></header>
@@ -19,6 +26,16 @@
             <p>Explore the comprehensive case study of Travel Whiz, a project that redefines seamless travel experiences.</p>
         </div>
     </section>
+
+    <!-- Goals and Objectives -->
+    <!-- <section class="project-goals">
+        <h2>Project Goals</h2>
+        <ul>
+            <li><strong>User Engagement:</strong> Increase app engagement by 30% through personalized travel experiences.</li>
+            <li><strong>Streamline Planning:</strong> Reduce travel planning time by integrating all services into a single platform.</li>
+            <li><strong>Market Reach:</strong> Expand to three new countries in the next two years.</li>
+        </ul>
+    </section> -->
 
     <!-- Detailed Sections -->
     <section class="project-details">
@@ -36,41 +53,47 @@
             <li>Personalized destination recommendations based on user interests and seasonal availability.</li>
             <li>All-in-one platform for booking flights, accommodations, and rental cars.</li>
             <li>Pre-planned holiday packages with a single itinerary.</li>
-            <li>24/7 customer support.</li>
-            <li>User-friendly interface with features like multi-language support, offline maps, and customer reviews.
+            <li>Customer support.</li>
+            <li>User-friendly interface with features like offline maps and customer reviews.
             </li>
         </ul>
-        <img src="/images/travelwhiz1.png" alt="TravelWhiz1">
-        <img src="/images/travelwhiz2.png" alt="TravelWhiz2">
-        <img src="/images/travelwhiz3.png" alt="TravelWhiz3">
-        <img src="/images/travelwhiz5.png" alt="TravelWhiz5">
-        <img src="/images/travelwhiz6.png" alt="TravelWhiz6">
-        <img src="/images/travelwhiz7.png" alt="TravelWhiz7">
-        <img src="/images/travelwhiz4.png" alt="TravelWhiz4">
 
         <h2>Target Audience</h2>
         <p>Our primary target audience consists of individuals between the ages of 18 to 45 who enjoy adventurous trips and prefer a hassle-free experience. They include:</p>
         <ul>
-            <li><b>Working Professionals:</b> Individuals with busy schedules who benefit from a streamlined travel-planning process.</li>
-            <li><b>Technology-Savvy Users:</b> Customers comfortable using mobile applications and seeking a high-quality, cross-platform experience.</li>
-            <li><b>Travel Enthusiasts:</b> Users who desire personalized travel packages, group trips, and exclusive promotions.</li>
+            <li><b>Working Professionals:</b> <br>Individuals with busy schedules who benefit from a streamlined travel-planning process.</li>
+            <li><b>Technology-Savvy Users:</b> <br>Customers comfortable using mobile applications and seeking a high-quality, cross-platform experience.</li>
+            <li><b>Travel Enthusiasts:</b> <br>Users who desire personalized travel packages, group trips, and exclusive promotions.</li>
         </ul>
 
         <h2>User Research</h2>
         <p>To understand the pain points and preferences of our target audience, we conducted extensive user research:</p>
         <ol>
-            <li><b>User Interviews</b><br>We conducted one-on-one interviews with 4 participants (aged 25-47) via Zoom and in-person to gain insight into users' frustrations with existing travel apps.</li>
-            <p>Key Takeaways:</p>
+            <li><b>User Interviews</b><br>We conducted one-on-one interviews with 5 participants (aged 25-47) via Zoom and in-person to gain insight into users' frustrations with existing travel apps.</li>
+
+            <b><p>Questions Asked:</p></b>
+            <ul>
+                <li>How familiar are you with travel apps or websites?</li>
+                <li>What are the biggest obstacles to plan a trip?</li>
+                <li>What are the corncerns when travelling?</li>
+            </ul>
+            <b><p>Key Takeaways:</p></b>
             <ul>
                 <li>Participants found travel information scattered across different platforms.</li>
                 <li>Personalized travel packages and unique trip recommendations were highly valued.</li>
                 <li>Group travel and exclusive promotions were key features that participants sought in a travel app.</li>
             </ul>
-
             <br>
         
             <li><b>Surveys</b><br>We conducted a survey using UX Tweak with 7 participants to understand users' preferences when booking travel online.</li>
-            <p>Key Findings:</p>
+
+            <b><p>Questions Asked:</p></b>
+            <ul>
+                <li>When booking travel online, do you prefer to book on a mobile application or a desktop application?</li>
+                <li>What are the biggest obstacles to plan a trip?</li>
+                <li>What is the reason to book vacation?</li>
+            </ul>
+            <b><p>Key Findings:</p></b>
             <ul>
                 <li>Most participants preferred mobile apps over desktop apps for booking travel.</li>
                 <li>Users expressed frustration with the time spent navigating cluttered travel websites.</li>
@@ -78,7 +101,7 @@
             </ul>
         </ol>
 
-        <img id= "survey" src="/images/travelwhizSurvey.png" alt="TravelWhiz4" width="500px">
+        <img id= "survey" src="/images/TW/Survey.png" alt="Travel Whiz Survey">
 
         <h2>Personas Development</h2>
         <p>From our research, we identified key user behavior patterns and developed six personas to guide our design process. These personas helped us prioritize features and tailor the user experience to specific needs, such as:</p>
@@ -87,30 +110,116 @@
             <li>Group travelers looking for shared itineraries and personalized recommendations.</li>
         </ul>
 
+        <img id= "personas" src="/images/TW/Persona1.png" alt="Persona 1">
+        <img id= "personas" src="/images/TW/Persona2.png" alt="Persona 2">
+        <img id= "personas" src="/images/TW/Persona3.png" alt="Persona 3">
+
         <h2>Design Process</h2>
         <p>Our design process followed a user-centered approach, incorporating research insights into every stage of development. We used the Five Planes of UX to structure the project:</p>
         <ol>
-            <li><b>Strategy Plane:</b> We defined the product objectives based on user needs, ensuring that the app focused on a seamless, hassle-free experience.</li>
-            <li><b>Scope Plane:</b> We identified key features, such as booking flights, accommodations, and car rentals, alongside feedback collection and travel recommendations.</li>
-            <li><b>Structure Plane:</b> We designed the information architecture, ensuring logical and intuitive navigation through the app’s core features.</li>
-            <li><b>Skeleton Plane:</b> We outlined the layout of buttons, controls, and images to create an efficient and aesthetically pleasing interface.</li>
-            <li><b>Surface Plane:</b> The final design featured a clean, modern visual aesthetic with a color palette that reflects the excitement of travel, while the typography (Roboto and Poppins) ensured readability and accessibility.</li>
+            <li><b>Strategy Plane:</b> 
+                <p>We defined the product objectives based on user needs, ensuring that the app focused on a seamless, hassle-free experience.</p>
+            </li>
+            <li><b>Scope Plane:</b> 
+                <p>We identified key features, such as booking flights, accommodations, and car rentals, alongside feedback collection and travel recommendations.</p>
+            </li>
+            <li><b>Structure Plane:</b> 
+                <p>We designed the information architecture, ensuring logical and intuitive navigation through the app’s core features.</p>
+            </li>
+            <li><b>Skeleton Plane:</b> 
+                <p>We outlined the layout of buttons, controls, and images to create an efficient and aesthetically pleasing interface.</p>
+            </li>
+            <li><b>Surface Plane:</b> 
+                <p>The final design featured a clean, modern visual aesthetic with a color palette that reflects the excitement of travel, while the typography (Roboto and Poppins) ensured readability and accessibility.</p>
+            </li>
         </ol>
 
         <h2>Card Sorting & Information Architecture</h2>
         <p>We used both open and closed card sorting methods to design the information architecture of Travel Whiz.</p>
         <ul>
-            <li><b>Closed Card Sorting:</b> Participants sorted travel-related content into pre-defined categories, allowing us to refine the app's content organization.</li>
-            <li><b>Open Card Sorting:</b> Participants created their own categories, providing insight into how users naturally group travel-related information. This helped us ensure that the app’s navigation aligned with user expectations.</li>
-        </ul>
+            <li><b>Closed Card Sorting:</b> 
+                <p>Participants sorted travel-related content into pre-defined categories, allowing us to refine the app's content organization.</p>
+            </li>
+            <img id= "sorting" src="/images/TW/CardSortingOpen.png" alt="Open Card Sorting">
+            <li><b>Open Card Sorting:</b> 
+                <p>Participants created their own categories, providing insight into how users naturally group travel-related information. This helped us ensure that the app’s navigation aligned with user expectations.</p>
+            </li>
+            <img id= "sorting" src="/images/TW/CardSortingClose.png" alt="Close Card Sorting">
+            <li><b>Information Architecture</b> </li>
+                <img id= "sorting" src="/images/TW/InformationArchitecture.png" alt="Close Card Sorting">
+            <li><b>Typography and color palette</b> </li>    
+                <img id= "sorting" src="/images/TW/ColorPalette.png" alt="Color Palette And Typography">
+        </ul>             
 
-        <img id= "sorting" src="/images/travelwhizSorting.png" alt="TravelWhiz4">
-
-        <h2>Usability Testing</h2>
-        <p>Usability testing played a crucial role in refining Travel Whiz’s user interface. We tested the app with 3 participants (aged 20-40, travel lovers) to evaluate the user experience.</p>
+        <h2>Screens</h2>
         <ul>
-            <li><b>Testing Objectives:</b> Measure the time required to complete key tasks (e.g., creating an account, navigating the app), identify unintended task sequences or extra steps, and evaluate the visual interface, including the placement of buttons, link size, and color contrast.</li>
-            <li><b>Key Insights:</b> Participants found the navigation intuitive and easy to use, feedback highlighted a desire for more vibrant colors to enhance the visual appeal, and all participants were able to contact customer support with ease, confirming the effectiveness of this feature.</li>
+            <li><b>Splash Screen</b></li>
+            <img src="/images/TW/SplashScreen.png" alt="Splash Screen">
+            <img src="/images/TW/SplashScreen1.png" alt="Splash Screen 1">
+
+            <li><b>Onboarding Screens</b></li>
+            <img src="/images/TW/OnboardingScreen1.png" alt="Onboarding Screen 1">
+            <img src="/images/TW/OnboardingScreen3.png" alt="Onboarding Screen 3">
+            <img src="/images/TW/OnboardingScreen4.png" alt="Onboarding Screen 4">
+            <img src="/images/TW/OnboardingScreen2.png" alt="Onboarding Screen 2">
+
+            <li><b>Sign In Screens</b></li>
+            <img src="/images/TW/SignInScreen1.png" alt="Sign In Screen 1">
+            <img src="/images/TW/SignInScreen2.png" alt="Sign In Screen 2">
+            <img src="/images/TW/SignInScreen3.png" alt="Sign In Screen 3">
+
+            <li><b>Landing Screens</b></li>
+            <img src="/images/TW/LandingScreen1.png" alt="Landing Screen 1">
+            <img src="/images/TW/LandingScreen2.png" alt="Landing Screen 2">
+            <img src="/images/TW/LandingScreen3.png" alt="Landing Screen 3"> <br>
+            <img src="/images/TW/LandingScreen4.png" alt="Landing Screen 4">
+            <img src="/images/TW/LandingScreen5.png" alt="Landing Screen 5">
+            <img src="/images/TW/LandingScreen6.png" alt="Landing Screen 6">
+
+            <li><b>Feature 1: Upcoming Trips Screens</b></li>
+            <img src="/images/TW/UpcomingTrip1.png" alt="Upcoming Trips Screen 1">
+            <img src="/images/TW/UpcomingTrip2.png" alt="Upcoming Trips Screen 2">
+
+            <li><b>Feature 2: Blog Screens</b></li>
+            <img src="/images/TW/Blog1.png" alt="Blog Screen 1">
+            <img src="/images/TW/Blog2.png" alt="Blog Screen 2">
+            <img src="/images/TW/Blog3.png" alt="Blog Screen 3">
+            <img src="/images/TW/Blog4.png" alt="Blog Screen 4">
+
+            <li><b>Feature 3: Location Screens</b></li>
+            <img src="/images/TW/Location1.png" alt="Location Search Screen">
+            <img src="/images/TW/Location2.png" alt="Location Screen">
+
+            <li><b>Feature 4: Payment Screens</b></li>
+            <img src="/images/TW/Payment1.png" alt="Payment Screen 1">
+            <img src="/images/TW/Payment2.png" alt="Payment Screen 2">
+            <img src="/images/TW/Payment3.png" alt="Payment Screen 3">
+
+            <li><b>Feature 5: Confirmation & Account Screens</b></li>
+            <img src="/images/TW/ConfirmationScreen.png" alt="Confirmation Screen">
+            <img src="/images/TW/AccountScreen.png" alt="Account Screen">
+
+            <li><b>Feature 6: History Screens</b></li>
+            <img src="/images/TW/History4.png" alt="History Screen 4">
+            <img src="/images/TW/History3.png" alt="History Screen 3">
+            <img src="/images/TW/History2.png" alt="History Screen 2">
+            <img src="/images/TW/History1.png" alt="History Screen 1">
+
+            <li><b>Feature 7: Favorites List, Customer Support & Feedback Screens</b></li>
+            <img src="/images/TW/Favorites.png" alt="Favorites Screen">
+            <img src="/images/TW/HelpCenter.png" alt="Help Center Screen">
+            <img src="/images/TW/Feedback.png" alt="Feedback Screen">
+        </ul>
+        
+        <h2>Usability Testing</h2>
+        <p>Usability testing played a crucial role in refining Travel Whiz’s user interface. We tested the app with 20 participants (aged 20-40, travel lovers) to evaluate the user experience.</p>
+        <ul>
+            <li><b>Testing Objectives:</b> 
+                <p>Measure the time required to complete key tasks (e.g., creating an account, navigating the app), identify unintended task sequences or extra steps, and evaluate the visual interface, including the placement of buttons, link size, and color contrast.</p>
+            </li>
+            <li><b>Key Insights:</b> 
+                <p>Participants found the navigation intuitive and easy to use, feedback highlighted a desire for more vibrant colors to enhance the visual appeal, and all participants were able to contact customer support and give their feedback with ease, confirming the effectiveness of the features.</p>
+            </li>
         </ul>
 
         <h2>Error Handling</h2>

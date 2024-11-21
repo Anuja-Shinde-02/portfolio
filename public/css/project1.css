@@ -24,8 +24,31 @@ body {
     margin-top: 150px;
 }
 
+/* Project Goals Section */
+.project-goals {
+    padding: 20px 100px;
+    background-color: #fff;
+}
+
+.project-goals h2 {
+    color: #333;
+    font-size: 1.4rem;
+}
+
+.project-goals ul {
+    list-style: none; /* Removes default bullets */
+    padding: 0;
+}
+
+.project-goals ul li {
+    background-color: #e9ecef;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
 .project-text h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #333;
     animation: fadeInUp 1s ease;
 }
@@ -51,7 +74,11 @@ body {
 }
 
 #survey {
-    width: 1100px;  /* Adjusts the width to take the full container width */
+    width: 1000px;  /* Adjusts the width to take the full container width */
+}
+
+#personas {
+    width: 600px;
 }
 
 #sorting {
@@ -65,7 +92,7 @@ body {
 
 .project-details h2,
 .project-details h3 {
-    font-size: 1rem; /* Unified heading style for H2 and H3 */
+    font-size: 1.3rem; /* Unified heading style for H2 and H3 */
     color: #424242;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -77,7 +104,7 @@ body {
 }
 
 .project-details img{
-    width: 400px;
+    width: 200px;
     height: auto;
     gap: 15px;
     border: 2px solid #cfcccc; /* Soft gray border */
@@ -135,6 +162,10 @@ body {
     }
 
     .project-details {
+        padding: 20px;
+    }
+    
+    .project-hero-content, .project-goals, .project-details {
         padding: 20px;
     }
 }

@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
             data: {
                 labels: ['Coder', 'Designer'],
                 datasets: [{
-                    data: [40, 60],
+                    data: [35, 65],
                     backgroundColor: ['#535353', '#A3A3A4']
                 }]
             },
