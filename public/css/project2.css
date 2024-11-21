@@ -69,6 +69,12 @@ body {
     animation: fadeInUp 1s ease;
 }
 
+.project-details p{    
+    line-height: 1.5; /* Increase line height for better readability */
+    word-wrap: break-word; /* Break long words if needed */
+    max-width: 60%; /* Limit width to allow wrapping */
+}
+
 .project-details ul{
     padding-left: 20px;
 }

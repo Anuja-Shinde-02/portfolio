@@ -40,11 +40,33 @@
             <li>Configurable logging with file rotation for security and compliance.</li>
         </ul>
 
+        <h2>Webapp Features</h2>
+        <ul>
+            <li>User login and authentication system.</li>
+            <li>CRUD operations for managing assignments.</li>
+            <li>Health check endpoint for the application.</li>
+            <li>Environment-based configuration for deployment.</li>
+            <li>Logging with rotation and controlled access.</li>
+            <li>Data import utility using CSV files.</li>
+            <li>Systemd service integration for app lifecycle management.</li>
+        </ul>
+
         <h2>Pulumi Infrastructure on AWS</h2>
         <ul>
             <li>Automated provisioning of AWS resources including VPC, subnets, RDS, and EC2 instances.</li>
             <li>Detailed documentation and setup guides for deployment consistency.</li>
             <li>Secure setup of Internet Gateway and route tables for reliable network connectivity.</li>
+        </ul>
+
+        <h2>Pulumi Infrastructure Features</h2>
+        <ul>
+            <li>Creation of a custom VPC.</li>
+            <li>Provisioning of public and private subnets across multiple availability zones.</li>
+            <li>Setup of an Internet Gateway and route tables.</li>
+            <li>Configuration of RDS for database requirements.</li>
+            <li>Deployment of an EC2 instance for the web application.</li>
+            <li>Management of security groups for application and database layers.</li>
+            <li>Initialization of Route 53 DNS records for domain name resolution.</li>
         </ul>
 
         <h2>Serverless Lambda Function</h2>
@@ -55,6 +77,32 @@
 
         <h2>Technologies Used</h2>
         <p>Node.js, AWS, Pulumi, MySQL, Lambda, SNS, DynamoDB, Mailgun, Google Cloud Storage.</p>
+
+        <h2>Configuration Example</h2>
+        <ul>
+            <li><b>DB_HOST</b>=localhost</li>
+            <li><b>DB_USERNAME</b>=myuser</li>
+            <li><b>DB_PASSWORD</b>=mypassword</li>
+            <li><b>DB_NAME</b>=mydatabase</li>
+            <li><b>NODE_ENV</b>=development</li>
+        </ul>
+
+        <h2>API Endpoints</h2>
+        <ul>
+            <li><b>GET</b> /: Home endpoint, returns a welcome message.</li>
+            <li><b>POST</b> /login: Endpoint for user authentication.</li>
+            <li><b>GET</b> /v1/assignments: Retrieve all assignments.</li>
+            <li><b>GET</b> /v1/assignments/:id: Get details for a specific assignment.</li>
+            <li><b>POST</b> /v1/assignments: Create a new assignment.</li>
+            <li><b>PUT</b> /v1/assignments/:id: Update an existing assignment.</li>
+            <li><b>DELETE</b> /v1/assignments/:id: Delete an assignment.</li>
+        </ul>
+
+        <h2>Logs</h2>
+        <p>Logs are stored in /var/log/webapp/. Access and application logs are rotated to maintain file size and ensure security.</p>
+
+        <h2>Health Checks</h2>
+        <p>The application provides a health check endpoint at /healthz, verifying database connectivity and correct API functioning.</p>
 
         <h2>Challenges and Learnings</h2>
         <p>The integration of diverse technologies and the assurance of a seamless flow of data across different components presented significant challenges. This project emphasized the importance of security practices and thorough system testing to maintain integrity and performance.</p>
