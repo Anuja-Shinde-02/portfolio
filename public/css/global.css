@@ -1,6 +1,6 @@
 /* Global Heading Styles */
 h1, h2, h3, h4, h5, h6 {
-    font-family: "proxima nova bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Raleway, Arial, sans-serif;
     font-weight: bolder;
     font-size: 2rem;
     line-height: 1.2;
@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Global Subheading Styles */
 .subheading, .skills-chart h2, .skills-bar h2, .random-facts h2, .my-story h2 {
-    font-family: "proxima nova bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Raleway, Arial, sans-serif;
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 1.4;

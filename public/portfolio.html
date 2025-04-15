@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Anuja</title>
     <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/portfolio.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/top.css">
-    <link rel="stylesheet" href="/css/portfolio.css">
     <!-- Standard favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
     <!-- For iOS web clips -->
@@ -21,16 +21,15 @@
     <!-- Placeholder for Header -->
     <header id="header"></header>
 
-    <!-- Hero Section -->
-    <section class="portfolio-hero">
-        <div class="portfolio-hero-content">
-            <div class="portfolio-text">
-                <h1>Check out some of my latest work.</h1>
-                <p>I’ve worked for corporations, and on various projects to design products used by millions of people. As a UI/UX Designer with over 5 years of experience, I specialize in creating impactful, user-centric designs that enhance business outcomes.</p>
-            </div>
-            <div class="portfolio-image">
-                <img src="/images/dummy2.jpeg" alt="Portfolio Showcase" width="300px" height="300px">
-            </div>
+    <!-- Hero Section with Background Video -->
+    <section class="hero animate-on-scroll">
+        <video autoplay muted loop class="background-video">
+            <source src="/videos/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay">
+            <h1>Designing Thoughtful Experiences, With a Touch of Code.</h1>
+            <p class="description">Blending creativity with functionality to craft seamless, human-centered designs.</p>
         </div>
     </section>
 
@@ -47,6 +46,8 @@
                 <img src="/images/ISD.jpeg" alt="Project 3" class="card-image">
                 <p>ISD Course Design Process Application</p>
             </a>
+        </div>
+        <div class="cards-container">
             <a href="/project2.html" class="portfolio-card">
                 <img src="/images/FoodliTN.gif" alt="Project 2" class="card-image">
                 <p>Foodlicious - Food & Beverage Platform</p>
@@ -74,11 +75,31 @@
                 document.getElementById("back-to-top-container").innerHTML = html;
             });
     </script>
+
+    <!-- Animation Logic for Scrolling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll, .hero-overlay, .latest-work, .work-cards, .card');
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view'); // Trigger animation
+                        observer.unobserve(entry.target); // Stop observing once animation is triggered
+                    }
+                });
+            }, { threshold: 0.1 });
+    
+            elementsToAnimate.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
     
     <!-- Directly included footer -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 Anuja Shinde. All rights reserved.</p>
+            <p>&copy; 2025 Anuja Shinde</p>
         </div>
     </footer>
 

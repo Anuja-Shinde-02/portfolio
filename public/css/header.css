@@ -1,19 +1,18 @@
 /* header.css */
 header {
     display: flex;
-    font-family: Helvetica, sans-serif, Arial;
+    font-family: Raleway, sans-serif, Arial;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #2e2d2d;
+    background-color: #ffffff;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    height: 60px;
+    height: 75px;
     transition: opacity 0.3s ease-in-out; /* Smooth transition on opacity change */
     animation: fadeInHeader 0.3s ease-in-out; /* Add a fade-in effect */
 }
@@ -29,7 +28,7 @@ header {
 
 .logo {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .logo a {
@@ -37,7 +36,7 @@ header {
 }
 
 .logo img {
-    height: 50px;
+    height: 85px;
     width: auto;
     border-radius: 50%;
     margin-left: 50px;
@@ -51,11 +50,14 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #f8f8f8;
+    color: #000000;
     transition: color 0.3s ease-in-out; /* Smooth hover transition */
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    text-decoration:overline;
+    color: #c0392b;
 }
+

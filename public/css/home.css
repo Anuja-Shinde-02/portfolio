@@ -1,6 +1,6 @@
 /* Base body styling */
 body {
-    font-family: Helvetica, sans-serif, Arial;
+    font-family: Raleway, sans-serif, Arial;
     background-color: #c4c2c2; /* Light gray background for consistency */
     margin: 0;
     padding: 0;
@@ -25,11 +25,11 @@ body {
 .hero-overlay {
     position: relative;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.1); /* Dark background with transparency */
+    background: rgba(114, 114, 114, 0.6); /* Dark background with transparency */
     padding: 40px;
     text-align: center;
-    color: rgb(78, 77, 77);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: rgb(255, 247, 247);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,7 +41,7 @@ body {
 .hero h1 {
     font-size: 35px;
     margin-bottom: 20px;
-    font-family: "proxima nova bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Raleway, Arial, sans-serif;
     opacity: 0; /* Initially hidden */
     transform: translateY(20px); /* Start position for animation */
     transition: all 1.5s ease; /* Transition for smooth animation */
@@ -66,13 +66,13 @@ body {
 .latest-work {
     text-align: center;
     padding: 100px 20px;
-    background-color: #eaeaea; /* Light gray background */
+    background-color: #fff; /* Light gray background */
     color: rgb(92, 90, 90);; /* Dark gray text for contrast */
     overflow-x: hidden;  
 }
 
 .latest-work h3{
-    font-family: "proxima nova bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Raleway, sans-serif, Arial;
     font-size: large;
     color: #535353; /* Dark gray text for contrast */
 }

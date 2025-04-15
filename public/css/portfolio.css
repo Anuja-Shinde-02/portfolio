@@ -1,50 +1,68 @@
+/* Base body styling */
 body {
-    font-family: "proxima nova bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Raleway, Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #ffffff; /* Light gray background for consistency */
     color: #333;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Portfolio Hero Section */
-.portfolio-hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 100px;
-    background-color: #f4f4f4;
-    box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2); /* Adds shadow to the bottom */
+/* Hero Section with Background Video */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.portfolio-hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.portfolio-text h1 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #333;
-    animation: fadeInUp 1s ease;
+.hero-overlay {
+    position: relative;
+    z-index: 1;
+    background: rgba(114, 114, 114, 0.6); /* Dark background with transparency */
+    padding: 40px;
+    text-align: center;
+    color: rgb(255, 247, 247);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-.portfolio-text p {
-    font-size: 1rem;
-    color: #666;
-    max-width: 500px;
-    animation: fadeInUp 1.5s ease;
+/* Hero Section */
+.hero h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-family: Raleway, Arial, sans-serif;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start position for animation */
+    transition: all 1.5s ease; /* Transition for smooth animation */
 }
 
-.portfolio-image img {
-    width: 200px;
-    height: auto;
-    margin-top: 80px;
-    border-radius: 8px;
-    animation: fadeIn 2s ease;
+.hero .description {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Trigger animation when in-view */
+.in-view h1, 
+.in-view .description {
+    opacity: 1;
+    transform: translateY(0); /* Move into position */
 }
 
 /* Body Section - Cards */

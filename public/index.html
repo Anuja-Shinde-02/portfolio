@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Anuja</title>
     <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/top.css">
@@ -21,108 +21,132 @@
 <body>
     <header id="header"></header>
 
-    <!-- Hero Section with Background Video -->
-    <section class="hero animate-on-scroll">
-        <video autoplay muted loop class="background-video">
-            <source src="/videos/background.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="hero-overlay">
-            <h1>Designing Thoughtful Experiences, With a Touch of Code.</h1>
-            <p class="description">Blending creativity with functionality to craft seamless, human-centered designs.</p>
+    <!-- Hero Section (Split Screen) -->
+    <section class="hero">
+        <div class="split-screen">
+            <div class="designer">
+                <!-- <h2>&lt;Designer/&gt;</h2>  -->
+                <h2><span>[Design]</span>er</h2>
+                <p>I design aesthetically pleasing and user-friendly interfaces.</p>
+            </div>
+            <!-- Divider Line -->
+            <div class="coder">
+                <!-- <h2>&lt;Coder&gt;</h2> -->
+                <h2>Coder</h2>
+                <p>I code dynamic and interactive web applications.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Latest Work Section -->
-    <section class="latest-work">
-        <div class="scrolling-gallery" id="scrollingGallery">
-            <!-- Duplicate the images to extend the gallery content -->
-            <img src="/images/anuja4.jpg" alt="Anuja">
-            <img src="/images/photography6.jpg" alt="Cycling">
-            <img src="/images/photography2.jpg" alt="Shadow Photography">
-            <img src="/images/cook2.jpg" alt="Cheesecake">
-            <img src="/images/photography9.jpg" alt="Colorful Sky">  
-            <img src="/images/plant1.jpg" alt="Plants">
-            <img src="/images/art1.jpg" alt="Sketching">
-            <!-- Repeating the set for seamless looping -->
-            <img src="/images/anuja4.jpg" alt="Anuja">
-            <img src="/images/photography6.jpg" alt="Cycling">
-            <img src="/images/photography2.jpg" alt="Shadow Photography">
-            <img src="/images/cook2.jpg" alt="Cheesecake">
-            <img src="/images/photography9.jpg" alt="Colorful Sky">
-            <img src="/images/plant1.jpg" alt="Plants">
-            <img src="/images/art1.jpg" alt="Sketching">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="about-text">
+        <p class="intro">I'm a designer based in Boston, MA.</p>
+        <p class="description">A unique blend of design aesthetics and coding skills that drive me to solve complex problems efficiently. When I'm not working on projects, you'll find me exploring new design trends, learning about AI, exploring different art forms or sky gazing!</p>
+        </div>
+        <div class="about-images">
+        <img src="/images/anuja3.jpg" alt="Me">
+        <img src="/images/photography4.jpg" alt="Photography">
+        <img src="/images/interiordesign.jpeg" alt="Organised Interiors">
+        <img src="/images/photography3.jpg" alt="Sunsets">
+        <img src="/images/sandart4.jpg" alt="Sand Art">
+        <img src="/images/art5.jpg" alt="Wall Painting">
+        <img src="/images/art7.png" alt="Wall Painting">
+        <link rel="stylesheet" href="/css/global.css">
         </div>
     </section>
 
-    <div id="back-to-top-container"></div>
+    <!-- Designer & Coder Section -->
+    <section class="skills-chart">
+        <div class="designer-skills">
+        <h2>Designer</h2>
+        <ul>
+            <li>UX/UI Design</li>
+            <li>Figma</li>
+            <li>Wireframe</li>
+            <li>Prototype</li>
+            <li>User Test</li>
+        </ul>
+        </div>
+        <div class="pie-chart">
+        <canvas id="skillsPieChart" width="400" height="400"></canvas>
+        </div>
+        <div class="coder-skills">
+        <h2>Coder</h2>
+        <ul>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Node.js</li>
+            <li>Android Development</li>
+        </ul>
+        </div>
+    </section>
+
+    <!-- Random Facts Section -->
+    <section class="random-facts">
+        <div class="facts-content">
+            <div class="fact-image">
+                <img src="/images/tea3.png" alt="teacup">
+            </div>
+            <div class="fact-text">
+                <h2>Random Facts</h2>
+                <ul>
+                    <li>I drink a lot of tea </li>
+                    <li>I’m obsessed with organizing things </li>
+                    <li>I love to cook (and eat) </li>
+                    <li>Sketching is my zen time </li>
+                    <li>I'm slightly addicted to YouTube </li>
+                    <li>I'm a bit of a clean freak </li>
+                    <li>Mom is my mentor </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Skills Section -->
+    <section class="skills-bar">
+        <h2>Skills</h2>
+        <div class="bar-graph">
+            <div class="bar">
+                <div class="bar-fill" data-skill-level="90">Figma</div>
+            </div>
+            <div class="bar">
+                <div class="bar-fill" data-skill-level="80">Cleaning</div>
+            </div>
+            <div class="bar">
+                <div class="bar-fill" data-skill-level="85">Wireframing</div>
+            </div>
+            <div class="bar">
+                <div class="bar-fill" data-skill-level="75">Cooking</div>
+            </div>
+            <div class="bar">
+                <div class="bar-fill" data-skill-level="80">User Testing</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Story Section -->
+    <section class="my-story">
+        <h2>Me in a Nutshell</h2>
+        <div class="story-content">
+            <p>I'm a UI/UX designer based in Boston, skilled in creating interfaces and systems that enhance user interaction. Since my college days, I've been involved in learning both the technical depth of development and the creative breadth of design. <br><br>
+            Away from the screen, I'm likely working on my culinary skills, tending to my sketching, or enjoying the simple moments with friends and family - proving that balancing professional growth with personal well-being is not only possible but necessary.</p>
+            <img src="/images/anuja6.jpg" alt="My Story Image" class="story-image">
+        </div>
+    </section>
+
+    <div id="back-to-top"></div>
+
     <!-- Directly included footer -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 Anuja Shinde. All rights reserved.</p>
+            <p>&copy; 2025 Anuja Shinde</p>
         </div>
     </footer>
-    
-    <script>
-        fetch("/components/top.html")
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById("back-to-top-container").innerHTML = html;
-            });
-    </script>
 
-    <!-- Animation Logic for Scrolling -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll, .hero-overlay, .latest-work, .work-cards, .card');
-    
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('in-view'); // Trigger animation
-                        observer.unobserve(entry.target); // Stop observing once animation is triggered
-                    }
-                });
-            }, { threshold: 0.1 });
-    
-            elementsToAnimate.forEach(element => {
-                observer.observe(element);
-            });
-
-            const cards = document.querySelectorAll('.latest-work .card');
-            const cardObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = 1; // Make visible
-                        entry.target.style.transform = 'translateY(0)'; // Move to final position
-                        cardObserver.unobserve(entry.target); // Optional: Stop observing once animation is triggered
-                    }
-                });
-            }, { threshold: 0.5 }); // Trigger when half of the element is visible
-    
-            cards.forEach(card => {
-                cardObserver.observe(card);
-            });
-        });
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const gallery = document.getElementById('scrollingGallery');
-            const images = document.querySelectorAll('.scrolling-gallery img');
-
-            images.forEach(image => {
-                image.addEventListener('mouseenter', () => {
-                    gallery.classList.add('paused');
-                });
-                image.addEventListener('mouseleave', () => {
-                    gallery.classList.remove('paused');
-                });
-            });
-        });
-    </script>
-
-    <script src="/src/scripts/common.js"></script>
     <script src="/src/scripts/footer.js"></script> <!-- Footer visibility logic -->
+    <script src="/src/scripts/common.js"></script>
+    <script src="/src/scripts/index.js"></script>
 </body>
 </html>

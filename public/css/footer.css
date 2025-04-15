@@ -1,12 +1,11 @@
 footer {    
-    font-family: Helvetica, sans-serif, Arial;
+    font-family: Raleway, sans-serif, Arial;
     display: none; /* Start as hidden and let JavaScript control visibility */
     justify-content: center; /* Center the footer-content horizontally */
     align-items: center; /* Center content vertically */
     padding: 10px 0; /* Reduced padding to remove unnecessary space */
-    background-color: #e4dfdf; /* Background color */
-    color: #858080; /* Text color */
-    border-top: 1px solid #d8d5d5; /* Subtle border at the top */
+    background-color: #fdfeff; /* Background color */
+    color: #000000; /* Text color */
     width: 100%; /* Full width */
     position: fixed; /* Fix it to the bottom of the viewport */
     left: 0; /* Align left */

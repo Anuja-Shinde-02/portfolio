@@ -1,0 +1,555 @@
+body, html {
+    font-family: Raleway, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #000000;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Split screen for Designer and Coder sections */
+.split-screen {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    min-height: 100vh;
+    box-shadow: 0 0 5px rgba(189, 189, 189, 0.1);
+    animation: fadeInUp 1.5s ease;
+    
+}
+
+.designer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: flex 0.3s ease;
+    box-shadow: 2px 0 5px rgba(145, 145, 145, 0.1); /* Soft shadow to the right */
+}
+
+.designer, .coder {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Ensure that heading and paragraph are on different lines */
+    align-items: center;
+    justify-content: center;
+    transition: flex 0.3s ease;
+    text-align: center; /* Center align text */
+    animation: fadeInUp 1.5s ease;
+}
+
+/* Headings for Designer and Coder */
+.designer h2, .coder h2 {
+    font-size: 2rem; /* Make the heading bigger */
+    font-weight: bold; /* Make the heading bold */
+    margin-bottom: 10px; /* Add space between heading and paragraph */
+    font-family: Raleway, Arial, sans-serif; /* Use a monospace font to give it a coding feel */
+}
+
+.coder h2 {
+    font-family: Raleway, Arial, sans-serif; /* Monospaced font for coding feel */
+    color: #000000; /* Terminal black */
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: none; /* Black background for the terminal look */
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.coder h2::before, .coder h2::after {
+    content: "</"; /* Adds < before */
+    margin-right: 5px;
+    color: #159e15; /* Initially black, matching the text */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.coder h2::after {
+    content: ">";
+    margin-left: 5px; /* Adds /> after */
+    color: #000000; /* Initially black */
+    transition: color 0.3s ease;
+}
+
+.coder h2:hover::before, .coder h2:hover::after {
+    color: #159e15; /* Changes to green on hover */
+}
+
+.coder h2:hover {
+    background-color: #000000; /* Darker background on hover */
+    color: #ffffff; /* White text on hover */
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.designer h2 {
+    font-family: Raleway, Arial, sans-serif;
+    color: #fbff00;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.designer h2 span {
+    font-weight: 700; /* Lighter weight for part of the text */
+    color: #000000; /* A different shade for the [Design] part */
+}
+
+.designer h2:hover {
+    background: linear-gradient(90deg, #ffffff,#fbff00);
+    /* background: #ffffff; */
+    /* Standard property */
+    background-clip: text;
+    
+    /* Vendor-specific property for compatibility with WebKit browsers */
+    -webkit-background-clip: text;
+    
+    /* Standard property */
+    color: transparent;
+    
+    /* Vendor-specific property */
+    -webkit-text-fill-color: transparent;
+
+    transition: background 0.5s ease;
+}
+
+/* Paragraph for Designer and Coder */
+.designer p, .coder p {
+    font-size: 0.9rem; /* Adjust the paragraph size */
+    line-height: 1.6; /* Add line spacing for readability */
+    margin: 0; /* Remove default margin */
+}
+
+/* Hover effects for Designer and Coder */
+.designer:hover {
+    flex: 2;
+    background-color: #e0e0e0;
+    background: linear-gradient(45deg, #001aff, #fbff00);
+    /*background-image:url('/images/strokes3.jpeg');*/
+    background-size: cover; /* Cover the entire area of the element */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    transition: opacity 0.5s ease; /* Transition effect for the opacity change */
+}
+
+.coder:hover {
+    flex: 2;
+    background-color: #e0e0e0; 
+    background: linear-gradient(45deg, #000000, #91ff00);
+    /* background-image:url('/images/code.jpeg');*/
+    background-size: cover; /* Cover the entire area of the element */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    transition: opacity 0.5s ease; /* Transition effect for the opacity change */
+}
+
+.intro {
+    font-size: 1.4rem; /* Larger font size for the introduction text */
+    font-weight:700; /* Make the introduction text bold */
+    margin: 75px 0 0 330px; /* Space below the description text */
+    max-width: 50%; /* Limit width to allow wrapping */
+    line-height: 1.5; /* Increase line height for better readability */
+    word-wrap: break-word; /* Break long words if needed */
+    text-align: center; /* left text within its container */
+    animation: fadeInUp 1.5s ease;
+}
+
+.description {
+    font-size: 0.9rem; /* Smaller font size for the description text */
+    font-weight: normal; /* Regular font weight for the description text */
+    margin: 30px 0 0 460px; /* Space below the description text */
+    max-width: 30%; /* Limit width to allow wrapping */
+    line-height: 1.5; /* Increase line height for better readability */
+    word-wrap: break-word; /* Break long words if needed */
+    text-align: center; /* left text within its container */
+    animation: fadeInUp 1.5s ease;
+}
+
+/* Spacing Between Sections */
+.skills-chart, .random-facts, .skills-bar{
+    margin-bottom: 10px; /* Increased margin for spacing between sections */
+}
+
+.about-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Creates a responsive grid layout */
+    justify-content: center;
+    margin: 50px 0 70px 200px;
+    gap: 15px;
+    animation: fadeInDown 1.5s ease;
+}
+
+/* Additional CSS for image animations */
+.about-images img {
+    width: 90px;
+    height: 90px;
+    border-radius: 10%;
+    margin: 10px;
+    padding: 3px;
+    border: 2px solid #cfcccc; /* Soft gray border */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;  /* Set initial opacity to 0 for animation */
+    transform: scale(0.8); /* Start images smaller and scale up */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Smooth transitions for opacity and transform */
+}
+
+.in-view {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+.skills-chart {
+    display: flex;
+    flex-direction:row; /* Stack horizontally on smaller screens */
+    justify-content:space-evenly;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0 20px 0;
+}
+
+.skills-chart .designer-skills,
+.skills-chart .coder-skills {
+    width: 100%;
+}
+
+
+.skills-chart .designer-skills ul {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #000000;
+    list-style: none;
+    margin-left: 100px;
+}
+
+.skills-chart .coder-skills ul {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #000000;
+    list-style: none;
+    margin-left: -20px;
+}
+
+.skills-chart .pie-chart {
+    width: 25%;
+    text-align: left;
+    margin-right: 100px ;
+}
+
+/* Sub-Headings and List Items */
+.skills-chart h2, .skills-bar h2, .random-facts h2, .my-story h2 {
+    font-size: 1rem; /* Larger font size for the introduction text */
+    font-weight:100; /* Make the introduction text bold */
+}
+
+.skills-chart ul, .random-facts ul {
+    font-size: 0.9rem; /* Smaller font size for list items */
+    font-weight: 100; /* Regular text */
+}
+
+.designer-skills{
+    margin-left: 100px;
+}
+
+.designer-skills h2{
+    margin-left: 140px;
+}
+
+.coder-skills h2{
+    margin-left: 20px;
+}
+
+.designer-skills, .coder-skills{
+    margin-top: -60px;
+}
+
+/* Random Facts Section */
+.random-facts {
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;  /* Centers the section by setting left and right margins to auto */
+    margin-right: auto; /* Centers the section by setting left and right margins to auto */
+    animation: fadeInUp 1.5s ease;
+    display: flex; /* Set display to flex to align children side by side */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; /* Center the items horizontally */
+    width: 80%; /* Adjust the width as necessary to fit your design */
+}
+
+.random-facts .facts-content {
+    display: flex;
+    align-items: center;  /* Ensures the image and text are vertically aligned */
+    justify-content: start;  /* Aligns content to the start of the flex container */
+    width: 100%; /* Ensures the container fills the full width */
+    gap: 20px; /* Adds some space between the image and the facts text */
+}
+
+.random-facts h2 {
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 18px;
+}
+
+.random-facts ul {
+    list-style: disc;
+    font-weight: 400;
+    color: #000000;
+    padding-left: 20px; /* Adds padding for the bullet points */
+    margin-top: 10px;  /* Adds some space above the list */
+}
+
+.random-facts .fact-text {
+    flex: 1; /* Allows text area to fill available space */
+    margin-right: 20px; /* Adjust right margin as needed */
+}
+
+.random-facts .fact-image {
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    max-width: 30%; /* Limits image width but can be adjusted */
+    margin-left: 150px;
+}
+
+.random-facts .fact-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateX(-50%); /* Start from half its width to the left */
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out; /* Smooth transition for moving and fading in */
+}
+
+.in-view .random-facts .fact-image img {
+    transform: translateX(0); /* Move to original position */
+    opacity: 1;
+}
+
+/* Bar Graph */
+.skills-bar {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    align-items: flex-end;
+    padding: 30px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    position: relative;
+}
+
+.skills-bar h2{
+    padding-left: 100px;
+    margin-left: 40px;
+    margin-top: 200px;
+    align-self: flex-start;
+}
+
+.bar-graph {
+    display: flex;
+    height: 350px; /* Ensure correct height for bar chart */
+    width: 100%;
+    max-width: 600px; /* Ensures the graph is not too wide on larger screens */
+    position: relative;
+    border-left: 1px solid #000000; /* Y-axis */
+    border-bottom: 1px solid #000000; /* X-axis */
+    padding-left: 0px;
+    padding-bottom: 0px;
+    box-sizing: border-box;
+    margin: 0 auto; /* Center the graph */
+    margin-left: 130px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.bar {
+    width: 100%; /* Full width to accommodate smaller screens */
+    margin: 0 10px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Bar Graph with Gradient, Light Border, and Enhanced Text Styling */
+/* Bar Graph with Gradient, Light Border, and Enhanced Text Styling */
+.bar-fill {
+    height: 0; /* Initially set height to 0 for animation */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: black;
+    font-size: 0.6rem; /* Smaller size for additional text */
+    box-sizing: border-box;
+    border-left: 2px solid transparent; /* Left border */
+    border-right: 2px solid transparent; /* Right border */
+    border-top: 2px solid transparent; /* Top border */
+    border-bottom: none; /* No bottom border */
+    border-radius: 3px; /* Rounded corners for smoother look */
+    transition: height 1.5s ease-in-out; /* Smooth animation for height */
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); Subtle text shadow for smaller text */
+    padding-top: 10px; /* Space from top to fit percentage */
+}
+
+/* Large percentage styling inside the bar */
+.bar-fill::before {
+    content: attr(data-skill-level) '%'; /* Display percentage from data attribute */
+    display: block;
+    font-size: 1rem; /* Larger size for percentage */
+    font-weight: bold;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for percentage text */
+    padding-bottom: 5px; /* To center the percentage in the bar */
+}
+
+/* Add gradients and borders for each bar */
+.bar:nth-child(1) .bar-fill {
+    background: linear-gradient(to top, #f39fb1, #ff9bb0); /* Dark to light gradient */
+    border-color: #ff9bb0; /* Light border */
+}
+
+.bar:nth-child(2) .bar-fill {
+    background: linear-gradient(to top, #acd1e9, #7ac3f5); /* Dark to light gradient */
+    border-color: #7ac3f5;
+}
+
+.bar:nth-child(3) .bar-fill {
+    background: linear-gradient(to top, #f8e7bc, #ffdf8c); /* Dark to light gradient */
+    border-color: #ffdf8c;
+}
+
+.bar:nth-child(4) .bar-fill {
+    background: linear-gradient(to top, #bbeeee, #86e0e0); /* Dark to light gradient */
+    border-color: #86e0e0;
+}
+
+.bar:nth-child(5) .bar-fill {
+    background: linear-gradient(to top, #dd8a8a, #b17373); /* Dark to light gradient */
+    border-color: #b17373;
+}
+
+/* Axis Labels */
+/* Adjust spacing for Y-axis label */
+.bar-graph::before {
+    content: 'Level'; /* The Y-axis label */
+    position: relative;
+    top: -20px;
+    left: -50px; /* Increase to create space from the Y-axis */
+    transform: translateX(0);
+    font-size: 1rem;
+}
+
+.bar-graph::after {
+    content: 'Type';
+    position: absolute;
+    bottom: -20px; /* Adjust as needed */
+    left: 0;
+    right: 0;
+    height: 20px; /* Adjust height for X-axis labels */
+    border-top: 2px #252525;
+    font-size: 1rem;
+    margin-left: 600px;
+}
+
+/* My Story Section */
+.my-story {
+    height: auto;
+    padding: 10px;
+    margin-bottom: 45px;
+    margin-left: 80px;
+    margin-right: 80px;
+    animation: fadeInUp 1.5s ease;
+}
+
+.my-story h2 {
+    text-align: left;
+    margin-left: 400px;
+    margin-top: 80px;
+    align-self: flex-start;
+}
+
+.my-story .story-content {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.my-story .story-image {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-top: -50px;
+    opacity: 0; /* Start as invisible */
+    transform: translateX(100%); /* Start from the right off-screen */
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out; /* Smooth transition for moving and fading in */
+}
+
+.in-view .my-story .story-image {
+    transform: translateX(0); /* Move to final position */
+    opacity: 1; /* Become fully visible */
+}
+
+.story-content{
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.my-story p {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-left: 250px;
+    font-size: 0.9rem;
+    max-width: 40%; /* Limit width to allow wrapping */
+    line-height: 1.5; /* Increase line height for better readability */
+    word-wrap: break-word; /* Break long words if needed */
+    animation: fadeInUp 1.5s ease;
+}
+  
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Additional Responsiveness */
+@media (max-width: 768px) {
+    .designer, .coder {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .designer h2, .coder h2 {
+        font-size: 1.2rem;
+    }
+
+    .designer p, .coder p {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Anuja</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/top.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+    <!-- For iOS web clips -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <!-- For Android and other devices -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+</head>
+<body>
+    <header id="header"></header>
+
+    <!-- Hero Section with Background Video -->
+    <section class="hero animate-on-scroll">
+        <video autoplay muted loop class="background-video">
+            <source src="/videos/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay">
+            <h1>Designing Thoughtful Experiences, With a Touch of Code.</h1>
+            <p class="description">Blending creativity with functionality to craft seamless, human-centered designs.</p>
+        </div>
+    </section>
+
+    <!-- Latest Work Section -->
+    <section class="latest-work">
+        <div class="scrolling-gallery" id="scrollingGallery">
+            <!-- Duplicate the images to extend the gallery content -->
+            <!-- <img src="/images/anuja4.jpg" alt="Anuja"> -->
+            <img src="/images/photography6.jpg" alt="Cycling">
+            <img src="/images/photography2.jpg" alt="Shadow Photography">
+            <img src="/images/YingYangPainting1.jpg" alt="Painting">
+            <img src="/images/cook2.jpg" alt="Cheesecake">
+            <img src="/images/photography9.jpg" alt="Colorful Sky">  
+            <img src="/images/plant1.jpg" alt="Plants">
+            <img src="/images/art1.jpg" alt="Sketching">
+            <!-- Repeating the set for seamless looping -->
+            <!-- <img src="/images/anuja4.jpg" alt="Anuja"> -->
+            <img src="/images/photography6.jpg" alt="Cycling">
+            <img src="/images/photography2.jpg" alt="Shadow Photography">
+            <img src="/images/YingYangPainting1.jpg" alt="Painting">
+            <img src="/images/cook2.jpg" alt="Cheesecake">
+            <img src="/images/photography9.jpg" alt="Colorful Sky">
+            <img src="/images/plant1.jpg" alt="Plants">
+            <img src="/images/art1.jpg" alt="Sketching">
+        </div>
+    </section>
+
+    <div id="back-to-top-container"></div>
+    <!-- Directly included footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Anuja Shinde</p>
+        </div>
+    </footer>
+    
+    <script>
+        fetch("/components/top.html")
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("back-to-top-container").innerHTML = html;
+            });
+    </script>
+
+    <!-- Animation Logic for Scrolling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll, .hero-overlay, .latest-work, .work-cards, .card');
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view'); // Trigger animation
+                        observer.unobserve(entry.target); // Stop observing once animation is triggered
+                    }
+                });
+            }, { threshold: 0.1 });
+    
+            elementsToAnimate.forEach(element => {
+                observer.observe(element);
+            });
+
+            const cards = document.querySelectorAll('.latest-work .card');
+            const cardObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1; // Make visible
+                        entry.target.style.transform = 'translateY(0)'; // Move to final position
+                        cardObserver.unobserve(entry.target); // Optional: Stop observing once animation is triggered
+                    }
+                });
+            }, { threshold: 0.5 }); // Trigger when half of the element is visible
+    
+            cards.forEach(card => {
+                cardObserver.observe(card);
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const gallery = document.getElementById('scrollingGallery');
+            const images = document.querySelectorAll('.scrolling-gallery img');
+
+            images.forEach(image => {
+                image.addEventListener('mouseenter', () => {
+                    gallery.classList.add('paused');
+                });
+                image.addEventListener('mouseleave', () => {
+                    gallery.classList.remove('paused');
+                });
+            });
+        });
+    </script>
+
+    <script src="/src/scripts/common.js"></script>
+    <script src="/src/scripts/footer.js"></script> <!-- Footer visibility logic -->
+</body>
+</html>
