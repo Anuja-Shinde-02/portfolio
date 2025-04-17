@@ -16,7 +16,6 @@ body, html {
     min-height: 100vh;
     box-shadow: 0 0 5px rgba(189, 189, 189, 0.1);
     animation: fadeInUp 1.5s ease;
-    
 }
 
 .designer {
@@ -52,7 +51,7 @@ body, html {
 .coder h2 {
     font-family: Raleway, Arial, sans-serif; /* Monospaced font for coding feel */
     color: #000000; /* Terminal black */
-    font-size: 2.2rem;
+    font-size: 3rem;
     font-weight: bold;
     letter-spacing: 2px;
     background-color: none; /* Black background for the terminal look */
@@ -87,7 +86,7 @@ body, html {
 .designer h2 {
     font-family: Raleway, Arial, sans-serif;
     color: #fbff00;
-    font-size: 2.2rem;
+    font-size: 3rem;
     font-weight: 700;
     letter-spacing: 2px;
 }
@@ -117,9 +116,10 @@ body, html {
 
 /* Paragraph for Designer and Coder */
 .designer p, .coder p {
-    font-size: 0.9rem; /* Adjust the paragraph size */
+    font-size: 1rem; /* Adjust the paragraph size */
     line-height: 1.6; /* Add line spacing for readability */
     margin: 0; /* Remove default margin */
+    font-weight: 400;
 }
 
 /* Hover effects for Designer and Coder */
@@ -178,18 +178,17 @@ body, html {
     justify-content: center;
     margin: 50px 0 70px 200px;
     gap: 15px;
-    animation: fadeInDown 1.5s ease;
+    animation: fadeInDown 0.5s ease;
 }
 
 /* Additional CSS for image animations */
 .about-images img {
     width: 90px;
     height: 90px;
-    border-radius: 10%;
-    margin: 10px;
-    padding: 3px;
-    border: 2px solid #cfcccc; /* Soft gray border */
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    margin: 5px;
+    border: 2px solid #ffffff; /* Soft gray border */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
     opacity: 0;  /* Set initial opacity to 0 for animation */
     transform: scale(0.8); /* Start images smaller and scale up */
     transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Smooth transitions for opacity and transform */

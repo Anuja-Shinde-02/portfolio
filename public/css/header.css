@@ -19,7 +19,7 @@ header {
 }
 
 header:hover {
-    box-shadow: 2px 0 5px rgba(145, 145, 145, 0.1); /* Soft shadow to the right */
+    box-shadow: 2px 0 5px rgba(145, 145, 145, 0.2); /* Soft shadow to the right */
 }
 
 /* Removed unused keyframes to avoid flicker */
@@ -61,7 +61,7 @@ header:hover {
     font-weight: 600;
     display: inline-block;
     width: max-content; /* ✅ fixed width to prevent shift */
-    min-width: 120px;
+    min-width: 80px;
     padding: 0 20px; /* adds space without affecting layout */
     text-align: center; /* or left/right depending on your design */
     white-space: nowrap; /* ✅ prevents wrapping */
@@ -71,7 +71,6 @@ header:hover {
 
 .nav-links a:hover {
     opacity: 0.7;
-    color:#eb213c;
 }
 
 .nav-links a.typing::after {

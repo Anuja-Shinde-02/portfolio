@@ -28,7 +28,7 @@ body {
 .hero-overlay {
     position: relative;
     z-index: 1;
-    background: rgba(114, 114, 114, 0.6); /* Dark background with transparency */
+    background: rgba(175, 174, 175, 0.6); /* Dark background with transparency */
     padding: 40px;
     text-align: center;
     color: rgb(255, 247, 247);
@@ -42,8 +42,8 @@ body {
 
 /* Hero Section */
 .hero h1 {
-    font-size: 35px;
-    margin-bottom: 20px;
+    font-size: 40px;
+    margin-bottom: 10px;
     font-family: Raleway, Arial, sans-serif;
     opacity: 0; /* Initially hidden */
     transform: translateY(20px); /* Start position for animation */
@@ -51,10 +51,12 @@ body {
 }
 
 .hero .description {
-    font-size: 15px;
+    font-size: 20px;
     line-height: 1.5;
-    margin-bottom: 0;
+    margin-bottom: 70px;
     opacity: 0;
+    color: #363636;
+    font-weight: 500;
     transform: translateY(20px);
 }
 
