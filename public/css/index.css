@@ -2,7 +2,7 @@ body, html {
     font-family: Raleway, Arial, sans-serif;
     line-height: 1.6;
     background-color: #ffffff;
-    color: #000000;
+    color: #01161E;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -50,7 +50,7 @@ body, html {
 
 .coder h2 {
     font-family: Raleway, Arial, sans-serif; /* Monospaced font for coding feel */
-    color: #000000; /* Terminal black */
+    color: #01161E; /* Terminal black */
     font-size: 3rem;
     font-weight: bold;
     letter-spacing: 2px;
@@ -93,7 +93,7 @@ body, html {
 
 .designer h2 span {
     font-weight: 700; /* Lighter weight for part of the text */
-    color: #000000; /* A different shade for the [Design] part */
+    color: #01161E; /* A different shade for the [Design] part */
 }
 
 .designer h2:hover {
@@ -217,7 +217,7 @@ body, html {
 .skills-chart .designer-skills ul {
     font-size: 0.9rem;
     font-weight: 400;
-    color: #000000;
+    color: #01161E;
     list-style: none;
     margin-left: 100px;
 }
@@ -225,7 +225,7 @@ body, html {
 .skills-chart .coder-skills ul {
     font-size: 0.9rem;
     font-weight: 400;
-    color: #000000;
+    color: #01161E;
     list-style: none;
     margin-left: -20px;
 }
@@ -293,7 +293,7 @@ body, html {
 .random-facts ul {
     list-style: disc;
     font-weight: 400;
-    color: #000000;
+    color: #01161E;
     padding-left: 20px; /* Adds padding for the bullet points */
     margin-top: 10px;  /* Adds some space above the list */
 }

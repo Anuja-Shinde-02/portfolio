@@ -20,3 +20,35 @@ function loadProjectDetails(projectId) {
         })
         .catch(error => console.error('Error loading the project details:', error));
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll(
+        '.animate-on-scroll, .hero-overlay, .portfolio-intro, .portfolio-card'
+    );
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    animatedElements.forEach(el => observer.observe(el));
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('.animate-on-scroll, .hero-overlay, .portfolio-card');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target); // animate once
+            }
+        });
+    }, { threshold: 0.15 });
+
+    animatedElements.forEach(el => observer.observe(el));
+});
